@@ -229,3 +229,54 @@ nota.addEventListener("change", () => {
       nota_result.textContent = "Nota no válida";
   }
 });
+
+//////////////////////////////////////////////////////////////
+
+const login = document.getElementById("login");
+const roles = document.getElementById("roles");
+const comprobar_estado = document.getElementById("comprobar_estado");
+const estado_result = document.getElementById("estado_result");
+
+comprobar_estado.addEventListener("click", () => {
+    if (login.value == "login_yes") {
+        switch (roles.value) {
+            case "admin":
+                estado_result.textContent = "Acceso total";
+                break;
+            case "user":
+                estado_result.textContent = "Acceso estándar";
+                break;
+            case "guest":
+                estado_result.textContent = "Acceso limitado";
+                break;
+            default:
+                estado_result.textContent = "Rol no válido";
+        }
+    } else {
+        estado_result.textContent = "No estás logeado";
+    }
+});
+
+//////////////////////////////////////////////////////////////
+
+const temperatura = document.getElementById("temperatura");
+const unidad = document.getElementById("unidad");
+const convertir = document.getElementById("convertir");
+const temperatura_result = document.getElementById("temperatura_result");
+
+convertir.addEventListener("click", () => {
+    const temp = parseFloat(temperatura.value);
+    if (isNaN(temp)) {
+        temperatura_result.textContent = "Por favor, introduce una temperatura válida";
+    } 
+    else {
+        switch (unidad.value) {
+            case "celsius":
+                temperatura_result.textContent = `Temperatura en Fahrenheit: ${(temp * 9/5) + 32} ºF`;
+                break;
+            case "fahrenheit":
+                temperatura_result.textContent = `Temperatura en Celsius: ${(temp - 32) * 5/9} ºC`;
+                break;
+        }
+    }
+});

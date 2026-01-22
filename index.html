@@ -12,12 +12,12 @@
         height: 700px;
       }
       .div2 {
-    width: 500px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+        width: 500px;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
     </style>
 
     <!-- <h2>Color fondo</h2>
@@ -67,29 +67,52 @@
 
     <h2>Planazos</h2>
     <select name="planes" id="planes">
-        <option value="default">Default</option>
-        <option value="netflix">Netflix & chill</option>
-        <option value="beber">Beber</option>
-        <option value="videojuegos">Vamo a juga</option>
-        <option value="futbol">Furbito</option>
+      <option value="default">Default</option>
+      <option value="netflix">Netflix & chill</option>
+      <option value="beber">Beber</option>
+      <option value="videojuegos">Vamo a juga</option>
+      <option value="futbol">Furbito</option>
     </select>
     <div id="plan_result" class="div2"></div>
 
     <h2>Calculadora</h2>
-    <input type="number" id="num1">
-    <input type="number" id="num2">
+    <input type="number" id="num1" />
+    <input type="number" id="num2" />
     <select name="" id="operacion">
-        <option value="suma">suma</option>
-        <option value="resta">resta</option>
-        <option value="multiplicacion">multiplicacion</option>
-        <option value="division">division</option>
+      <option value="suma">suma</option>
+      <option value="resta">resta</option>
+      <option value="multiplicacion">multiplicacion</option>
+      <option value="division">division</option>
     </select>
     <button id="calcular">Calcular</button>
     <p id="resultado_operacion"></p>
 
     <h2>Notas</h2>
-    <input type="number" id="nota" min="0" max="10">
+    <input type="number" id="nota" min="0" max="10" />
     <p id="nota_result"></p>
+
+    <h2>Roles</h2>
+    <select name="" id="login">
+      <option value="login_yes">Estoy logeado</option>
+      <option value="login_no">No estoy logeado</option>
+    </select>
+    <select name="" id="roles">
+      <option value="default">Selecciona tu rol</option>
+      <option value="admin">Admin</option>
+      <option value="user">User</option>
+      <option value="guest">Guest</option>
+    </select>
+    <button id="comprobar_estado">Comprobar estado</button>
+    <p id="estado_result"></p>
+
+    <h2>Conversor de temperaturas</h2>
+    <input type="number" id="temperatura" />
+    <select name="" id="unidad">
+        <option value="celsius">ºC</option>
+        <option value="fahrenheit">ºF</option>
+    </select>   
+    <button id="convertir">Convertir</button>
+    <p id="temperatura_result"></p>
 
     <script src="script.js"></script>
   </body>
